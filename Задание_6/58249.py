@@ -20,13 +20,14 @@ for i in range(5):
 
 turtle.end_fill()
 
-canvas = turtle.getcanvas()
-count = 0
+#canvas = turtle.getcanvas()
+#count = 0
 
-for x in range(-100 * scale, 100 * scale, scale):
-    for y in range(-100 * scale, 100 * scale, scale):
-        item = canvas.find_overlapping(x, y, x, y)
-        if len(item) == 1 and item[0] == 5:
-            count += 1
-print(count)
+#for x in range(-100 * scale, 100 * scale, scale):
+    #for y in range(-100 * scale, 100 * scale, scale):
+        #item = canvas.find_overlapping(x, y, x, y)
+        #print()
+        #if len(item) == 1 and item[0] == 5:
+         #   count += 1
+#print(count)
 turtle.done()
