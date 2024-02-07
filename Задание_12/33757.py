@@ -1,9 +1,8 @@
 def main():
-    # 20 + 10 + 70
-    max_numbers_count = 100
-    for count_one in range(max_numbers_count):
-        for count_two in range(max_numbers_count):
-            for count_three in range(max_numbers_count):
+    test_max_count_one = 100
+    for count_one in range(test_max_count_one):
+        for count_two in range(test_max_count_one):
+            for count_three in range(test_max_count_one):
                 temp_str = '0' + count_one * '1' + count_two * '2' + count_three * '3'
                 while ('01' in temp_str) or ('02' in temp_str) or ('03' in temp_str):
                     temp_str = temp_str.replace('01', '30', 1)
