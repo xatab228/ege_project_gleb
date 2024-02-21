@@ -12,7 +12,7 @@ f = reader()
 c = 0
 for line in f:
     line = sorted(line)
-    if line[2] > line[1] + line[0]:
+    if line[2]**2 < (line[1]**2 + line[0]**2):
         print(line)
         c+=1
 print(c)
