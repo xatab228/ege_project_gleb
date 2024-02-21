@@ -11,24 +11,20 @@ def check(arr):
             count += 1
     return count == 1
 def main():
-    maxnum = 0
-    maxsum = 0
     file = reader()
+    maxNum = 0
+    maxSum = 0
     count = 0
     for item in file:
-        if item % 100 == 15 and item > maxnum:
-            maxnum = item
-    print(maxnum)
-    for triad in range(0, len(file), 3):
-        rd = 0 if (triad + 2) > (len(file) - 1) else file[triad + 2]
-        nd = 0 if (triad + 1) > (len(file) - 1) else file[triad + 1]
-        st = file[triad]
-        arr = [st, nd, rd]
-        sa = sum(arr)
-        if check(arr) and sa >= maxnum:
+        if item % 100 == 15 and item > maxNum:
+            maxNum = item
+    for triad in range(len(file) - 2):
+        arr = [file[triad], file[triad + 1], file[triad + 2]]
+        arrSum = sum(arr)
+        if check(arr) and arrSum >= maxNum:
             count += 1
-            if sa > maxsum:
-                maxsum = sa
-    return [count, maxsum]
+            if arrSum > maxSum:
+                maxSum = arrSum
+    return [count, maxSum]
 print(main())
 
