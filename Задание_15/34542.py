@@ -10,10 +10,10 @@ common_interval_end = min(P[1], Q[1])
 common_interval_length = common_interval_end - common_interval_start
 
 # Поиск интервала A за пределами общего интервала между P и Q
-A_start = common_interval_end
-A_end = common_interval_start - 1
+A_end = common_interval_end
+A_start = common_interval_start
 
 # Вычисление длины интервала A
-A_length = A_end - A_start + 1
+A_length = A_end - A_start
 
 print("Максимальная длина интервала A:", A_length)
